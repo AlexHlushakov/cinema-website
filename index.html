@@ -2,7 +2,6 @@
 <html lang="ru">
 
 <head>
-   <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/style.css">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +35,8 @@
             </ul>
          </nav>
          <div class="user">
-            <span class="">Привет, Alex</span>
-            <img id="user-photo" src="img/profile.jpeg" alt="profile photo">
+            <span class="">Привет, </span><a href="#" class="profile-name">Alex</a>
+            <a href="#"><img id="user-photo" src="img/profile.jpeg" alt="profile photo"></a>
          </div>
       </div>
       <div class="film container">
@@ -52,7 +51,7 @@
             </p>
             <div class="film-details">
                <div class="time">
-                  <img src="img/clock 1.svg" alt="clock icon" class="time-icon">
+                  <img src="img/clock.svg" alt="clock icon" class="time-icon">
                   <span class="time-counter">240 мин</span>
                </div>
                <div class="rating">
@@ -111,6 +110,44 @@
          </div>
       </div>
    </header>
+   <main class="content">
+      <div class="seats container">
+         <div class="seats-room-layout">
+            <div class="screen">
+               <div class="screen-line"></div>
+               <div class="screen-glow"></div>
+            </div>
+            <div class="seats-room-row big">
+            </div>
+            <div class="seats-backseat">
+               <div class="seats-room-row small"></div>
+               <div class="seats-room-row small"></div>
+            </div>
+            <div class="seats-infoboard">
+               <div class="seats-info-label">
+                  <div class="seat-label available"></div>
+                  <div class="seat-desc">Свободно</div>
+               </div>
+               <div class="seats-info-label">
+                  <div class="seat-label chosen"></div>
+                  <div class="seat-desc chosen-desc">Выбрано</div>
+               </div>
+               <div class="seats-info-label">
+                  <div class="seat-label unavailable"></div>
+                  <div class="seat-desc">Занято</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="buy-info container">
+         <div class="price">
+            <div class="price-title">Всего к оплате</div>
+            <div class="current-price"></div>
+         </div>
+         <button type="button" id="buy-btn">Перейти к оплате</button>
+      </div>
+   </main>
+   <script src="/script.js"></script>
 </body>
 
 </html>

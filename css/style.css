@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import "normalize.css";
 
 * {
    box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: #fff;
 }
 
 body {
@@ -44,8 +50,6 @@ body {
 }
 
 .menu-link {
-   text-decoration: none;
-   color: #fff;
    font-size: 14px;
    line-height: 16px;
 }
@@ -56,6 +60,10 @@ body {
    align-items: center;
    font-size: 16px;
    line-height: 19px;
+}
+
+.profile-name {
+   margin-left: 5px;
 }
 
 #user-photo {
@@ -93,6 +101,7 @@ body {
 
 .film-trailer {
    margin: auto;
+   margin-top: 70px;
 }
 
 .film-details {
@@ -154,8 +163,12 @@ body {
    cursor: pointer;
 }
 
+.active {
+   background: #fe8e05;
+}
+
 .session-date-item:hover {
-   background: rgba(218, 83, 21, 0.74);
+   background: rgba(121, 119, 119, 0.74);
 }
 
 .session-month {
@@ -207,4 +220,141 @@ body {
 #time-selector {
    width: 108px;
    background-position: 75px;
+}
+
+.content {
+   background: #621402;
+   padding-top: 60px;
+}
+
+.seats-room-layout {
+   max-width: 1170px;
+   max-height: 686px;
+   width: 100%;
+   height: 686px;
+   background: rgba(36, 36, 36, 0.18);
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+}
+
+.screen-line {
+   max-width: 1018px;
+   border: 10px solid rgba(0, 0, 0, 0.39);
+   margin: 0 auto;
+   margin-top: 50px;
+}
+
+.screen-glow {
+   width: 914px;
+   height: 67px;
+   transform: perspective(10px) rotateX(1deg);
+   margin: -2px auto 20px auto;
+   background: linear-gradient(180deg, rgba(196, 196, 196, 0.21) 0%, rgba(196, 196, 196, 0) 100%);
+}
+
+.big {
+   display: grid;
+   grid-template-rows: repeat(4, 1fr);
+   grid-template-columns: repeat(19, 1fr);
+   grid-template-areas:
+      "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+      "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+      "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+      "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single";
+   margin: 0 auto;
+}
+
+.seat-single {
+   background-size: 38px 30px;
+   width: 38px;
+   height: 30px;
+   margin: 5px;
+}
+
+.seats-backseat {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin: 0 25px;
+}
+
+.small {
+   display: grid;
+   grid-template-rows: repeat(4, 1fr);
+   grid-template-columns: repeat(10, 1fr);
+   margin: 55px auto;
+}
+
+.seats-infoboard {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   margin: 0 70px 35px 70px;
+   padding-top: 20px;
+   border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.seats-info-label {
+   margin-right: 10px;
+   display: flex;
+   align-items: center;
+}
+
+.seat-label {
+   background-size: 38px 30px;
+   width: 38px;
+   height: 30px;
+   margin: 5px;
+}
+
+.available {
+   background-image: url("../img/seat.png");
+}
+
+.chosen {
+   background-image: url("../img/seat_active.png");
+}
+
+.unavailable {
+   background-image: url("../img/seat.png");
+   opacity: 0.4;
+}
+
+.seat-desc {
+   font-size: 16px;
+   line-height: 19px;
+   opacity: 0.5;
+}
+
+.chosen-desc {
+   color: #fe8e05;
+}
+
+.buy-info {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 64px;
+   padding-bottom: 158px;
+}
+
+.price-title {
+   font-size: 18px;
+   line-height: 21px;
+}
+
+.current-price {
+   margin-top: 12px;
+   font-size: 52px;
+   line-height: 61px;
+}
+
+#buy-btn {
+   width: 250px;
+   height: 70px;
+   background: #fe8e05;
+   border-radius: 5px;
+   color: #fff;
+   cursor: pointer;
 }
