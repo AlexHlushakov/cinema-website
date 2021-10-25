@@ -1,2 +1,2 @@
 # cinema-website
-Учебный проект в рамках интенсива Glo Academy
+Online Cinema Booking WebSite. Training project with all base functionality.
