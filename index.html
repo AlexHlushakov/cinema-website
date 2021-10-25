@@ -5,14 +5,14 @@
    <link rel="stylesheet" href="css/style.css">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <title>Cinema Website</title>
 </head>
 
 <body>
    <header class="header">
       <div class="navbar container">
-         <a href="/" class="header-logo">
+         <a href="#" class="header-logo">
             <img src="img/logo.svg" alt="here is a logo">
          </a>
          <nav class="navbar">
@@ -75,7 +75,7 @@
                   <span class="session-day">27</span>
                   <span class="session-week">пт</span>
                </div>
-               <div class="session-date-item">
+               <div class="session-date-item active">
                   <span class="session-month">Апр</span>
                   <span class="session-day">28</span>
                   <span class="session-week">сб</span>
@@ -147,6 +147,8 @@
          <button type="button" id="buy-btn">Перейти к оплате</button>
       </div>
    </main>
+   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
    <script src="script.js"></script>
 </body>
 

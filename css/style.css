@@ -13,17 +13,18 @@ a {
 body {
    font-family: "Roboto", sans-serif;
    color: #fff;
+   overflow-x: hidden;
 }
 
 .header {
    background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, rgba(98, 20, 2, 1) 100%),
       url("../img/bg-body.png");
    background-size: cover;
-   min-height: 100vh; /*temp*/
 }
 
 .container {
    max-width: 1170px;
+   width: 100%;
    margin: auto;
 }
 
@@ -358,3 +359,364 @@ body {
    color: #fff;
    cursor: pointer;
 }
+
+/*@media (max-width: 376px) {
+   .header {
+      background: #621402;
+   }
+
+   .container {
+      padding: 5px 15px;
+      width: 100%;
+      margin: auto;
+   }
+
+   .navbar {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      background: rgba(41, 27, 27, 1);
+      z-index: 1;
+   }
+
+   .header-logo {
+      width: 70%;
+      height: 70%;
+   }
+
+   .menu {
+      position: absolute;
+      padding-bottom: 10px;
+      left: -10px;
+      width: 150px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      background: rgba(41, 27, 27, 1);
+      margin-top: -200px;
+      transition: margin-top 2s ease-out;
+   }
+
+   .active-menu {
+      margin-top: 180px;
+   }
+   .menu-item {
+      padding-bottom: 5px;
+   }
+
+   .menu-link {
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   .user {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   .profile-name {
+      margin-left: 5px;
+   }
+
+   #user-photo {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-left: 10px;
+   }
+
+   .film {
+      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.603) 0%, rgba(98, 20, 2, 1) 100%),
+         url("../img/bg-body.png");
+      background-position: center 40px;
+   }
+
+   .film-title-small {
+      font-size: 20px;
+      line-height: 150%;
+      opacity: 0.5;
+   }
+
+   .film-title {
+      font-size: 28px;
+      line-height: 36px;
+      margin-top: 11px;
+      margin-bottom: 23px;
+   }
+
+   .film-description {
+      font-size: 14px;
+      line-height: 140%;
+      max-width: 300px;
+      height: 120px;
+      overflow-y: hidden;
+   }
+
+   .film-trailer {
+      margin: auto;
+      margin-bottom: 30px;
+   }
+
+   .film-details {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 35px;
+   }
+
+   .time {
+      display: flex;
+      align-items: center;
+   }
+
+   .time-icon {
+      margin-right: 14px;
+   }
+
+   .rating {
+      display: flex;
+      align-items: center;
+   }
+
+   .rating-icon {
+      width: 35px;
+      height: 17.5px;
+      margin-right: 12px;
+      margin-left: 34px;
+   }
+
+   .rating-current {
+      font-size: 24px;
+      line-height: 150%;
+   }
+
+   .session {
+      padding: 46px 0 63px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+   }
+
+   .session-date-block {
+      display: flex;
+      margin-top: 20px;
+   }
+
+   .session-date-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      margin-right: 15px;
+      width: 90px;
+      height: 90px;
+      cursor: pointer;
+   }
+
+   .active {
+      background: #fe8e05;
+   }
+
+   .session-date-item:hover {
+      background: rgba(121, 119, 119, 0.74);
+   }
+
+   .session-month {
+      font-size: 16px;
+      line-height: 19px;
+   }
+
+   .session-day {
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 35px;
+   }
+
+   .session-week {
+      font-size: 19px;
+      line-height: 22px;
+   }
+
+   .session-cinema {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .session-select {
+      margin-top: 33px;
+      padding: 18px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.15) url("../img/Vector2.svg") no-repeat;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      appearance: none;
+      -webkit-appearance: none;
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+      cursor: pointer;
+   }
+
+   #cinema-selector {
+      min-width: 100px;
+      background-position: 105px;
+   }
+
+   .session-time {
+      display: flex;
+      flex-direction: column;
+   }
+
+   #time-selector {
+      width: 108px;
+      background-position: 35px;
+   }
+
+   .content {
+      background: #621402;
+      padding-top: 60px;
+   }
+
+   .seats-room-layout {
+      max-width: 1170px;
+      max-height: 686px;
+      width: 100%;
+      background: rgba(36, 36, 36, 0.18);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .screen-line {
+      max-width: 1018px;
+      border: 10px solid rgba(0, 0, 0, 0.39);
+      margin: 0 auto;
+      margin-top: 50px;
+   }
+
+   .screen-glow {
+      max-width: 914px;
+      height: 67px;
+      transform: perspective(10px) rotateX(1deg);
+      margin: -2px auto 20px auto;
+      background: linear-gradient(180deg, rgba(196, 196, 196, 0.21) 0%, rgba(196, 196, 196, 0) 100%);
+   }
+
+   .big {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(19, 1fr);
+      grid-template-areas:
+         "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+         "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+         "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single"
+         "seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single seat-single";
+      margin: 0 auto;
+   }
+
+   .seat-single {
+      background-size: 38px 30px;
+      width: 38px;
+      height: 30px;
+      margin: 5px;
+   }
+
+   .seats-backseat {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0 25px;
+   }
+
+   .small {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(10, 1fr);
+      margin: 55px auto;
+   }
+
+   .seats-infoboard {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      margin: 0 70px 35px 70px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+   }
+
+   .seats-info-label {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+   }
+
+   .seat-label {
+      background-size: 38px 30px;
+      width: 38px;
+      height: 30px;
+      margin: 5px;
+   }
+
+   .available {
+      background-image: url("../img/seat.png");
+   }
+
+   .chosen {
+      background-image: url("../img/seat_active.png");
+   }
+
+   .unavailable {
+      background-image: url("../img/seat.png");
+      opacity: 0.4;
+   }
+
+   .seat-desc {
+      font-size: 16px;
+      line-height: 19px;
+      opacity: 0.5;
+   }
+
+   .chosen-desc {
+      color: #fe8e05;
+   }
+
+   .buy-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 64px;
+      padding-bottom: 158px;
+   }
+
+   .price-title {
+      font-size: 18px;
+      line-height: 21px;
+   }
+
+   .current-price {
+      margin-top: 12px;
+      font-size: 52px;
+      line-height: 61px;
+   }
+
+   #buy-btn {
+      width: 250px;
+      height: 70px;
+      background: #fe8e05;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+   }
+}*/
