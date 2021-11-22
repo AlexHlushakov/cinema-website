@@ -26,6 +26,7 @@ const bigRowBlock = document.querySelector('.big'),
    buyBtn = document.querySelector('#buy-btn'),
    dates = document.querySelectorAll('.session-date-item'),
    headerLogo = document.querySelector('.header-logo'),
+   moreDesc = document.querySelector('#more-btn'),
    menu = document.querySelector('.menu');
 
 
@@ -33,11 +34,22 @@ let chosenSeats = [], chosenDate, chosenMonth, chosenCinema = cinema.value, chos
 
 
 // event listeners
-headerLogo.addEventListener('click', () => {
+headerLogo.addEventListener('click', (e) => {
+   e.preventDefault();
    if (menu.className !== 'menu active-menu') {
       menu.classList.add('active-menu')
    } else {
       menu.classList.remove('active-menu')
+   }
+})
+
+moreDesc.addEventListener('click', (e) => {
+   e.preventDefault();
+   const description = document.querySelector('.film-description');
+   if (description.className !== 'film-description open') {
+      description.classList.add('open')
+   } else {
+      description.classList.remove('open')
    }
 })
 
@@ -51,22 +63,31 @@ time.addEventListener('change', () => {
    refreshSeats();
 })
 
+
+function dateListener(currentDate) {
+   currentDate.addEventListener('click', () => {
+      for (let date of dates) {
+         date.classList.remove('active');
+      };
+      currentDate.classList.add("active");
+      chosenDate = currentDate.childNodes[3].textContent;
+      chosenMonth = currentDate.childNodes[1].textContent;
+      refreshSeats();
+   })
+}
+
+
 for (let i = 0; i < dates.length; i++) {
    if (dates[i].className === "session-date-item active") {
       chosenDate = dates[i].childNodes[3].textContent;
       chosenMonth = dates[i].childNodes[1].textContent;
+      dateListener(dates[i]);
    } else {
-      dates[i].addEventListener('click', () => {
-         for (let date of dates) {
-            date.classList.remove('active');
-         };
-         dates[i].classList.add("active");
-         chosenDate = dates[i].childNodes[3].textContent;
-         chosenMonth = dates[i].childNodes[1].textContent;
-         refreshSeats();
-      })
+      dateListener(dates[i]);
    }
 }
+
+
 
 
 buyBtn.addEventListener('click', () => {
