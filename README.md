@@ -1,2 +1,13 @@
-# cinema-website
-Online Cinema Booking WebSite. Training project with all base functionality.
+# Cinema-website
+
+- Online Cinema Booking WebSite.
+- Functionality of choosing different cinemas, time and dates.
+- Firestore database for saving changes in seats layout.
+
+
+Important!  To clear the info about unavaiable seats type "clearSeats()" in console.
+
+## Technologies used in a project:
+<img align="left" alt="html" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+<img align="left" alt="css" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+<img align="left" alt="javascript" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
