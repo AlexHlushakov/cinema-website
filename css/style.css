@@ -363,3 +363,353 @@ body {
    color: #fff;
    cursor: pointer;
 }
+
+@media (max-width: 1025px) {
+   .header {
+      background-position: center 0px;
+   }
+
+   .container {
+      padding: 5px 20px;
+      margin: auto;
+   }
+
+   .session {
+      padding: 40px 20px 50px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+         "session-date-block session-cinema"
+         "session-time";
+   }
+
+   .session-time {
+      margin-top: 20px;
+   }
+
+   .session-select {
+      margin-top: 20px;
+   }
+
+   .seat-single {
+      background-size: 32px 24px;
+      width: 32px;
+      height: 24px;
+      margin: 4px;
+   }
+}
+
+@media (max-width: 940px) {
+   #cinema-selector {
+      min-width: 100px;
+      max-width: 300px;
+      background-position: 260px;
+   }
+   .seat-single {
+      background-size: 24px 18px;
+      width: 24px;
+      height: 18px;
+      margin: 4px;
+   }
+}
+
+@media (max-width: 689px) {
+   .header {
+      background-position: center 40px;
+   }
+
+   .film {
+      padding-top: 60px;
+   }
+
+   .navbar {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      background: rgba(41, 27, 27, 1);
+      z-index: 1;
+   }
+
+   .header-logo {
+      width: 70%;
+      height: 70%;
+      z-index: 2;
+   }
+
+   .menu {
+      position: absolute;
+      padding-bottom: 10px;
+      padding-left: 60px;
+      left: -40px;
+      width: 180px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      background: rgba(41, 27, 27, 1);
+      margin-top: -200px;
+      border-radius: 5px;
+      transition: margin-top 2s ease-in-out;
+   }
+
+   .active-menu {
+      margin-top: 160px;
+   }
+   .menu-item {
+      padding-bottom: 5px;
+   }
+
+   .menu-link {
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   .user {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   .profile-name {
+      margin-left: 5px;
+   }
+
+   #user-photo {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-left: 10px;
+   }
+}
+
+@media (max-width: 760px) {
+   .header {
+      background: #621402;
+   }
+
+   .container {
+      padding: 5px 15px;
+   }
+
+   .navbar {
+      position: fixed;
+      background: rgba(41, 27, 27, 1);
+      z-index: 1;
+   }
+
+   .header-logo {
+      width: 70%;
+      height: 70%;
+      z-index: 2;
+   }
+
+   .menu {
+      position: absolute;
+      padding-bottom: 10px;
+      padding-left: 60px;
+      left: -40px;
+      width: 180px;
+      flex-direction: column;
+      background: rgba(41, 27, 27, 1);
+      margin-top: -200px;
+      border-radius: 5px;
+      transition: margin-top 2s ease-in-out;
+   }
+
+   .active-menu {
+      margin-top: 160px;
+   }
+   .menu-item {
+      padding-bottom: 5px;
+   }
+
+   .user {
+      font-size: 14px;
+      line-height: 16px;
+   }
+
+   #user-photo {
+      width: 25px;
+      height: 25px;
+   }
+
+   .film {
+      padding-top: 70px;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.603) 0%, rgba(98, 20, 2, 1) 100%),
+         url("../img/bg-body.png");
+      background-position: center 40px;
+   }
+
+   .film-title-small {
+      font-size: 16px;
+   }
+
+   .film-title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 18px;
+   }
+
+   .film-description {
+      font-size: 14px;
+      line-height: 125%;
+      max-width: 308px;
+      height: 100px;
+      overflow-y: hidden;
+      margin-bottom: 0;
+      transition: height 1s ease-in-out;
+   }
+
+   .open {
+      height: 210px;
+   }
+
+   #more-btn {
+      display: flex;
+      justify-content: flex-end;
+      max-width: 300px;
+      font-size: 10px;
+      text-decoration: underline;
+      margin-top: 5px;
+   }
+
+   .film-trailer {
+      margin-bottom: 30px;
+   }
+
+   .film-details {
+      margin-top: 10px;
+      margin-bottom: 35px;
+   }
+
+   .rating-current {
+      font-size: 20px;
+   }
+
+   .session {
+      padding: 40px 0 50px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .session-date-block {
+      padding: 10px 15px;
+      width: 100%;
+      margin: auto;
+   }
+
+   .session-date-item {
+      margin: 0 8px;
+      width: 60px;
+      height: 60px;
+   }
+
+   .session-month {
+      font-size: 12px;
+   }
+
+   .session-day {
+      font-size: 22px;
+      line-height: 20px;
+   }
+
+   .session-week {
+      font-size: 12px;
+      line-height: 20px;
+   }
+
+   .session-cinema {
+      padding: 10px 15px;
+      width: 100%;
+      margin: auto;
+   }
+
+   .session-select {
+      margin-top: 15px;
+      height: 50px;
+      background-size: 1rem;
+      font-size: 12px;
+      line-height: 100%;
+   }
+
+   #cinema-selector {
+      min-width: 100px;
+      background-position: 265px;
+   }
+
+   .session-time {
+      padding: 10px 15px;
+      width: 100%;
+      margin: auto;
+   }
+
+   .content {
+      padding-top: 30px;
+   }
+
+   .seats-room-layout {
+      height: 350px;
+   }
+
+   .screen-line {
+      margin-top: 30px;
+   }
+
+   .screen-glow {
+      max-width: 914px;
+      width: 100%;
+      height: 40px;
+      margin: -2px auto 10px auto;
+   }
+
+   .seat-single {
+      background-size: 12px 9px;
+      width: 12px;
+      height: 9px;
+      margin: 2px;
+   }
+
+   .small {
+      margin: 15px 2px;
+   }
+
+   .seats-infoboard {
+      margin: 20px 0;
+   }
+
+   .seat-label {
+      background-size: 19px 15px;
+      width: 19px;
+      height: 15px;
+      margin: 5px;
+   }
+
+   .seat-desc {
+      font-size: 12px;
+   }
+
+   .buy-info {
+      margin-top: 34px;
+      padding-bottom: 34px;
+   }
+
+   .price-title {
+      font-size: 14px;
+   }
+
+   .current-price {
+      font-size: 38px;
+      line-height: 56px;
+   }
+
+   #buy-btn {
+      width: 180px;
+      height: 60px;
+      font-size: 14px;
+   }
+}
