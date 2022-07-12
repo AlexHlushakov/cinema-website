@@ -1,8 +1,14 @@
+/*imports*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 @import "normalize.css";
 
+/*all page rules*/
+
 * {
    box-sizing: border-box;
+   margin: 0;
+   padding: 0;
 }
 
 a {
@@ -10,39 +16,46 @@ a {
    color: #fff;
 }
 
+ul {
+   list-style: none;
+}
+
+/*all page rules body and container*/
+
 body {
    font-family: "Roboto", sans-serif;
    color: #fff;
    overflow-x: hidden;
+   width: 100vw;
 }
 
-.header {
+.container {
+   max-width: 1200px;
+   width: 100%;
+   padding: 30px 15px;
+   margin: 0 auto;
+}
+
+/*first section*/
+
+.section-header {
    background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, rgba(98, 20, 2, 1) 100%),
       url("../img/bg-body.png");
    background-size: cover;
 }
 
-.container {
-   max-width: 1170px;
-   width: 100%;
-   margin: auto;
-}
-
-.navbar {
-   padding: 30px 0;
+.header {
    display: flex;
    align-items: center;
 }
 
 .header-logo {
-   width: 30px;
-   height: 30px;
+   max-width: 30px;
+   max-height: 30px;
 }
 
 .menu {
-   margin: 0;
-   margin-left: 17px;
-   list-style: none;
+   margin-left: 5%;
    display: flex;
 }
 
@@ -105,7 +118,6 @@ body {
 }
 
 .film-trailer {
-   margin: auto;
    margin-top: 70px;
 }
 
@@ -143,10 +155,10 @@ body {
 }
 
 .session {
-   padding: 46px 0 63px 0;
+   padding-top: 46px;
+   padding-bottom: 63px;
    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
    display: flex;
-   justify-content: space-between;
    align-items: flex-start;
 }
 
@@ -192,6 +204,12 @@ body {
    line-height: 22px;
 }
 
+.session-select-container {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+}
+
 .session-cinema {
    display: flex;
    flex-direction: column;
@@ -220,6 +238,7 @@ body {
 .session-time {
    display: flex;
    flex-direction: column;
+   margin-left: 20px;
 }
 
 #time-selector {
@@ -236,7 +255,7 @@ body {
    max-width: 1170px;
    max-height: 686px;
    width: 100%;
-   height: 686px;
+   height: 100%;
    background: rgba(36, 36, 36, 0.18);
    border-radius: 10px;
    display: flex;
@@ -251,8 +270,9 @@ body {
 }
 
 .screen-glow {
-   width: 914px;
+   max-width: 914px;
    height: 67px;
+   width: 92%;
    transform: perspective(10px) rotateX(1deg);
    margin: -2px auto 20px auto;
    background: linear-gradient(180deg, rgba(196, 196, 196, 0.21) 0%, rgba(196, 196, 196, 0) 100%);
@@ -341,7 +361,7 @@ body {
    align-items: center;
    justify-content: space-between;
    margin-top: 64px;
-   padding-bottom: 158px;
+   padding-bottom: 100px;
 }
 
 .price-title {
@@ -364,85 +384,80 @@ body {
    cursor: pointer;
 }
 
-@media (max-width: 1025px) {
-   .header {
-      background-position: center 0px;
-   }
-
+@media (max-width: 1200px) {
    .container {
-      padding: 5px 20px;
-      margin: auto;
+      padding-left: 40px;
+      padding-right: 40px;
    }
 
-   .session {
-      padding: 40px 20px 50px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas:
-         "session-date-block session-cinema"
-         "session-time";
+   #cinema-selector {
+      min-width: 300px;
+      background-position: 265px;
    }
 
-   .session-time {
-      margin-top: 20px;
-   }
-
-   .session-select {
-      margin-top: 20px;
-   }
-
+   .seat-label,
    .seat-single {
-      background-size: 32px 24px;
-      width: 32px;
-      height: 24px;
-      margin: 4px;
+      background-size: 28px 22px;
+      width: 28px;
+      height: 22px;
+      margin: 3px;
    }
 }
 
-@media (max-width: 940px) {
-   #cinema-selector {
-      min-width: 100px;
-      max-width: 300px;
-      background-position: 260px;
+@media (max-width: 900px) {
+   .session {
+      flex-direction: column;
+      width: 550px;
+      align-items: center;
    }
+
+   .session-select-container {
+      margin-left: 0;
+      margin-top: 30px;
+   }
+
+   .session-time {
+      margin-left: 80px;
+   }
+
+   .seat-label,
    .seat-single {
       background-size: 24px 18px;
       width: 24px;
       height: 18px;
-      margin: 4px;
    }
 }
 
-@media (max-width: 689px) {
+@media (max-width: 767px) {
+   .section-header {
+      background-position: center 0px;
+   }
+
    .header {
-      background-position: center 40px;
-   }
-
-   .film {
-      padding-top: 60px;
-   }
-
-   .navbar {
       display: flex;
       align-items: center;
       position: fixed;
       background: rgba(41, 27, 27, 1);
-      z-index: 1;
+      z-index: 99;
+      top: 0;
+      height: 60px;
+   }
+
+   .header-logo-block {
+      z-index: 100;
    }
 
    .header-logo {
-      width: 70%;
-      height: 70%;
-      z-index: 2;
+      max-width: 24px;
+      max-height: 24px;
    }
 
    .menu {
       position: absolute;
       padding-bottom: 10px;
-      padding-left: 60px;
+      padding-left: 80px;
       left: -40px;
-      width: 180px;
+      width: 220px;
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -450,10 +465,11 @@ body {
       margin-top: -200px;
       border-radius: 5px;
       transition: margin-top 2s ease-in-out;
+      z-index: 1;
    }
 
    .active-menu {
-      margin-top: 160px;
+      margin-top: 180px;
    }
    .menu-item {
       padding-bottom: 5px;
@@ -482,82 +498,49 @@ body {
       border-radius: 50%;
       margin-left: 10px;
    }
-}
-
-@media (max-width: 760px) {
-   .header {
-      background: #621402;
-   }
-
-   .container {
-      padding: 5px 15px;
-   }
-
-   .navbar {
-      position: fixed;
-      background: rgba(41, 27, 27, 1);
-      z-index: 1;
-   }
-
-   .header-logo {
-      width: 70%;
-      height: 70%;
-      z-index: 2;
-   }
-
-   .menu {
-      position: absolute;
-      padding-bottom: 10px;
-      padding-left: 60px;
-      left: -40px;
-      width: 180px;
-      flex-direction: column;
-      background: rgba(41, 27, 27, 1);
-      margin-top: -200px;
-      border-radius: 5px;
-      transition: margin-top 2s ease-in-out;
-   }
-
-   .active-menu {
-      margin-top: 160px;
-   }
-   .menu-item {
-      padding-bottom: 5px;
-   }
-
-   .user {
-      font-size: 14px;
-      line-height: 16px;
-   }
-
-   #user-photo {
-      width: 25px;
-      height: 25px;
-   }
 
    .film {
-      padding-top: 70px;
+      padding-top: 7rem;
       flex-direction: column;
-      justify-content: space-between;
-      background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.603) 0%, rgba(98, 20, 2, 1) 100%),
-         url("../img/bg-body.png");
-      background-position: center 40px;
    }
 
-   .film-title-small {
-      font-size: 16px;
+   .film-trailer {
+      margin-top: 0;
+      margin-bottom: 40px;
    }
 
-   .film-title {
-      font-size: 24px;
-      line-height: 28px;
-      margin-bottom: 18px;
+   .session-time {
+      margin-left: 50px;
    }
 
+   .content {
+      padding-top: 30px;
+   }
+
+   .seats-infoboard {
+      margin: 20px 20px 30px 20px;
+   }
+
+   .seat-label,
+   .seat-single {
+      background-size: 19px 15px;
+      width: 19px;
+      height: 15px;
+   }
+
+   .buy-info {
+      margin-top: 0;
+   }
+}
+
+@media (max-width: 650px) {
+   .film-info {
+      max-width: 408px;
+      align-self: flex-start;
+   }
    .film-description {
       font-size: 14px;
       line-height: 125%;
-      max-width: 308px;
       height: 100px;
       overflow-y: hidden;
       margin-bottom: 0;
@@ -565,151 +548,95 @@ body {
    }
 
    .open {
-      height: 210px;
+      height: 200px;
    }
 
    #more-btn {
       display: flex;
       justify-content: flex-end;
-      max-width: 300px;
+      max-width: 400px;
       font-size: 10px;
       text-decoration: underline;
       margin-top: 5px;
    }
-
-   .film-trailer {
-      margin-bottom: 30px;
+   .seats-backseat {
+      margin: 0 10px;
    }
-
-   .film-details {
-      margin-top: 10px;
-      margin-bottom: 35px;
-   }
-
-   .rating-current {
-      font-size: 20px;
-   }
-
-   .session {
-      padding: 40px 0 50px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-   }
-
-   .session-date-block {
-      padding: 10px 15px;
-      width: 100%;
-      margin: auto;
-   }
-
-   .session-date-item {
-      margin: 0 8px;
-      width: 60px;
-      height: 60px;
-   }
-
-   .session-month {
-      font-size: 12px;
-   }
-
-   .session-day {
-      font-size: 22px;
-      line-height: 20px;
-   }
-
-   .session-week {
-      font-size: 12px;
-      line-height: 20px;
-   }
-
-   .session-cinema {
-      padding: 10px 15px;
-      width: 100%;
-      margin: auto;
-   }
-
-   .session-select {
-      margin-top: 15px;
-      height: 50px;
-      background-size: 1rem;
-      font-size: 12px;
-      line-height: 100%;
-   }
-
-   #cinema-selector {
-      min-width: 100px;
-      background-position: 265px;
-   }
-
-   .session-time {
-      padding: 10px 15px;
-      width: 100%;
-      margin: auto;
-   }
-
-   .content {
-      padding-top: 30px;
-   }
-
-   .seats-room-layout {
-      height: 350px;
-   }
-
-   .screen-line {
-      margin-top: 30px;
-   }
-
-   .screen-glow {
-      max-width: 914px;
-      width: 100%;
-      height: 40px;
-      margin: -2px auto 10px auto;
-   }
-
-   .seat-single {
-      background-size: 12px 9px;
-      width: 12px;
-      height: 9px;
-      margin: 2px;
-   }
-
    .small {
-      margin: 15px 2px;
+      margin: 20px auto;
    }
-
-   .seats-infoboard {
-      margin: 20px 0;
-   }
-
-   .seat-label {
-      background-size: 19px 15px;
-      width: 19px;
-      height: 15px;
-      margin: 5px;
-   }
-
-   .seat-desc {
-      font-size: 12px;
+   .seat-single {
+      background-size: 15px 10px;
+      width: 15px;
+      height: 10px;
    }
 
    .buy-info {
-      margin-top: 34px;
-      padding-bottom: 34px;
+      padding-bottom: 60px;
    }
 
    .price-title {
-      font-size: 14px;
+      font-size: 16px;
    }
 
    .current-price {
+      margin-top: 5px;
       font-size: 38px;
-      line-height: 56px;
+      line-height: 46px;
    }
 
    #buy-btn {
       width: 180px;
-      height: 60px;
-      font-size: 14px;
+      height: 50px;
+   }
+}
+
+@media (max-width: 540px) {
+   .container{
+      padding: 30px 15px;
+   }
+
+   .open {
+      height: 250px;
+   }
+
+   .session {
+      align-items: flex-start;
+   }
+
+   .session-select-container{
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .session-time{
+      margin-left: 0;
+      margin-top: 20px;
+   }
+
+   #cinema-selector{
+      min-width: 250px;
+      width: 250px;
+   }
+   .session-date{
+      width: 300px;
+   }
+
+   .seat-single{
+      background-size: 10px 8px;
+      width: 10px;
+      height: 8px;
+      margin: 2px;
+   }
+   .seat-label{
+      background-size: 14px 10px;
+      width: 14px;
+      height: 10px;
+   }
+   .seat-desc{
+      font-size: 12px;
+   }
+   .small{
+      margin: 20px 5px;
    }
 }
