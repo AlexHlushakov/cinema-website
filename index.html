@@ -5,40 +5,38 @@
    <link rel="stylesheet" href="css/style.css">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
    <title>Cinema Website</title>
 </head>
 
 <body>
-   <header class="header">
-      <div class="navbar container">
-         <a href="#" class="header-logo">
-            <img src="img/logo.svg" alt="here is a logo">
+   <section class="section-header">
+      <header class="header container">
+         <a href="#" class="header-logo-block">
+            <img src="img/logo.svg" alt="here is a logo" class="header-logo">
          </a>
-         <nav class="navbar">
-            <ul class="menu">
-               <li class="menu-item">
-                  <a href="#" class="menu-link">Главная</a>
-               </li>
-               <li class="menu-item">
-                  <a href="#" class="menu-link">Фильмы</a>
-               </li>
-               <li class="menu-item">
-                  <a href="#" class="menu-link">Кинотеатры</a>
-               </li>
-               <li class="menu-item">
-                  <a href="#" class="menu-link">События</a>
-               </li>
-               <li class="menu-item">
-                  <a href="#" class="menu-link">Поддержка</a>
-               </li>
-            </ul>
-         </nav>
+         <ul class="menu">
+            <li class="menu-item">
+               <a href="#" class="menu-link">Главная</a>
+            </li>
+            <li class="menu-item">
+               <a href="#" class="menu-link">Фильмы</a>
+            </li>
+            <li class="menu-item">
+               <a href="#" class="menu-link">Кинотеатры</a>
+            </li>
+            <li class="menu-item">
+               <a href="#" class="menu-link">События</a>
+            </li>
+            <li class="menu-item">
+               <a href="#" class="menu-link">Поддержка</a>
+            </li>
+         </ul>
          <div class="user">
             <span class="">Привет, </span><a href="#" class="profile-name">Alex</a>
             <a href="#"><img id="user-photo" src="img/profile.jpeg" alt="profile photo"></a>
          </div>
-      </div>
+      </header>
       <div class="film container">
          <div class="film-info">
             <small class="film-title-small">Avengers: Infinity War</small>
@@ -93,24 +91,27 @@
                </div>
             </div>
          </div>
-         <div class="session-cinema">
-            <span class="session-label">Кинотеатр</span>
-            <select name="cinema-selector" id="cinema-selector" class="session-select">
-               <option value="oct" selected>Октябрь, ул. Калужская 28</option>
-               <option value="vdnh">ВДНХ, ул. ВДНХ 45</option>
-               <option value="city-mall">Сити Молл, ул. Ореховая 34</option>
-            </select>
+         <div class="session-select-container">
+            <div class="session-cinema">
+               <span class="session-label">Кинотеатр</span>
+               <select name="cinema-selector" id="cinema-selector" class="session-select">
+                  <option value="oct" selected>Октябрь, ул. Калужская 28</option>
+                  <option value="vdnh">ВДНХ, ул. ВДНХ 45</option>
+                  <option value="city-mall">Сити Молл, ул. Ореховая 34</option>
+               </select>
+            </div>
+            <div class="session-time">
+               <span class="session-label">Время</span>
+               <select name="time-selector" id="time-selector" class="session-select">
+                  <option value="16" selected>16:00</option>
+                  <option value="18_20">18:20</option>
+                  <option value="20_10">20:10</option>
+               </select>
+            </div>
          </div>
-         <div class="session-time">
-            <span class="session-label">Время</span>
-            <select name="time-selector" id="time-selector" class="session-select">
-               <option value="16" selected>16:00</option>
-               <option value="18_20">18:20</option>
-               <option value="20_10">20:10</option>
-            </select>
-         </div>
+
       </div>
-   </header>
+   </section>
    <main class="content">
       <div class="seats container">
          <div class="seats-room-layout">
